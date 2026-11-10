@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8a5cd90667d33441a8831a2be23eba8, type: 3}
+  m_Name: ShopSounds
+  m_EditorClassIdentifier: Assembly-CSharp::BrotatoLike.ShopSounds
+  achat:
+    clips:
+    - {fileID: 8300000, guid: 761f567ee492a0049b7b1bae939e3a46, type: 3}
+    volume: 0.55
+    pitchMin: 1
+    pitchMax: 1.05
+    minInterval: 0.05
+  achatRefuse:
+    clips:
+    - {fileID: 8300000, guid: e7105413e6942eb4489f6b024e18f273, type: 3}
+    volume: 0.5
+    pitchMin: 1
+    pitchMax: 1
+    minInterval: 0.1
+  relance:
+    clips:
+    - {fileID: 8300000, guid: 5095974f5388e294387203e421529a6c, type: 3}
+    volume: 0.55
+    pitchMin: 0.95
+    pitchMax: 1.05
+    minInterval: 0.05
+  cadenas:
+    clips:
+    - {fileID: 8300000, guid: 509d7bbe3ce0f594facbc049971634e4, type: 3}
+    volume: 0.5
+    pitchMin: 1
+    pitchMax: 1
+    minInterval: 0.05
+  fusion:
+    clips:
+    - {fileID: 8300000, guid: 3d626a4f0804b7248a1d9ec4cf2eea47, type: 3}
+    volume: 0.6
+    pitchMin: 1
+    pitchMax: 1
+    minInterval: 0.1
+  vente:
+    clips:
+    - {fileID: 8300000, guid: 03e4e0ee6a0ad4c48ad62c2e6bfd06b8, type: 3}
+    volume: 0.55
+    pitchMin: 1
+    pitchMax: 1
+    minInterval: 0.05
+  amelioration:
+    clips:
+    - {fileID: 8300000, guid: e580719805241514d9abab1f8797d47b, type: 3}
+    volume: 0.55
+    pitchMin: 1
+    pitchMax: 1.05
+    minInterval: 0.05

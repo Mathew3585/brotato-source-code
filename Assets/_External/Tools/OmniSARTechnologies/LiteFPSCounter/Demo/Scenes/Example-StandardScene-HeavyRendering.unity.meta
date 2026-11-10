@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 553759efeeeab404684f7471d257c82c
+timeCreated: 1540810681
+licenseType: Store
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 132638
+  packageName: Lite FPS Counter - Probably the world's fastest FPS counter
+  packageVersion: 1.0.1
+  assetPath: Assets/OmniSARTechnologies/LiteFPSCounter/Demo/Scenes/Example-StandardScene-HeavyRendering.unity
+  uploadId: 739912

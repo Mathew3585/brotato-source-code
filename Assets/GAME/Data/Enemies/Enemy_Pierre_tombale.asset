@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02b1dce8c704076499b1382628aac651, type: 3}
+  m_Name: Enemy_Pierre_tombale
+  m_EditorClassIdentifier: Assembly-CSharp::BrotatoLike.EnemyData
+  displayName: Tombstone
+  behavior: 0
+  isBoss: 0
+  runFrames:
+  - {fileID: 172626504, guid: c4d2ccab0c2ad7e47853b6e31a7ac7c2, type: 3}
+  - {fileID: 626918169, guid: c4d2ccab0c2ad7e47853b6e31a7ac7c2, type: 3}
+  hitSprite: {fileID: -966563848, guid: c4d2ccab0c2ad7e47853b6e31a7ac7c2, type: 3}
+  deadSprite: {fileID: 218841338, guid: c4d2ccab0c2ad7e47853b6e31a7ac7c2, type: 3}
+  animFps: 4
+  scale: 1.6
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  facesLeft: 0
+  rotateToDirection: 0
+  rotationOffset: -90
+  debrisColor: {r: 0.5, g: 0.45, b: 0.6, a: 1}
+  bobAmount: 0.08
+  maxHealth: 50
+  healthPerWave: 15
+  moveSpeed: 0.9
+  contactDamage: 3
+  damagePerWave: 0.7
+  radius: 0.4
+  knockbackResistance: 0.9
+  projectileSprite: {fileID: 0}
+  projectileColor: {r: 1, g: 1, b: 1, a: 1}
+  projectileScale: 1
+  projectileSpeed: 5
+  projectileDamage: 1
+  projectileDamagePerWave: 0.25
+  fireInterval: 2
+  projectilesPerShot: 1
+  projectileSpread: 0
+  preferredDistance: 5
+  chargeTriggerDistance: 5
+  chargeWindup: 0.6
+  chargeSpeed: 9
+  chargeDuration: 0.45
+  splitInto: {fileID: 0}
+  splitCount: 0
+  materialDrop: 10
+  dropChance: 1
+  crateChance: 0.2
+  isElite: 1

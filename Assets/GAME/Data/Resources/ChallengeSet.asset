@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa991c6d1a2d87f46bd786d14a90823d, type: 3}
+  m_Name: ChallengeSet
+  m_EditorClassIdentifier: Assembly-CSharp::BrotatoLike.ChallengeSet
+  challenges:
+  - id: first_harvest
+    displayName: First Harvest
+    type: 0
+    target: 5
+    character: {fileID: 0}
+    reward: {fileID: 11400000, guid: 5b37b165f348cb742ab51ba508a75145, type: 2}
+  - id: night_shift
+    displayName: Night Shift
+    type: 0
+    target: 10
+    character: {fileID: 0}
+    reward: {fileID: 11400000, guid: 2a195a153a12cd248b9cdb073de1e03c, type: 2}
+  - id: deep_night
+    displayName: Deep Night
+    type: 0
+    target: 15
+    character: {fileID: 0}
+    reward: {fileID: 11400000, guid: d7b7c1f0bc102b0479a24a070f0f1d25, type: 2}
+  - id: pest_control
+    displayName: Pest Control
+    type: 4
+    target: 1000
+    character: {fileID: 0}
+    reward: {fileID: 11400000, guid: 03b6b1737be43d048be3f1ebbe7ce5f4, type: 2}
+  - id: exterminator
+    displayName: Exterminator
+    type: 4
+    target: 2500
+    character: {fileID: 0}
+    reward: {fileID: 11400000, guid: a0bc7caa2ac2c754084fe7729ebf6dd6, type: 2}
+  - id: hoarder
+    displayName: Hoarder
+    type: 5
+    target: 750
+    character: {fileID: 0}
+    reward: {fileID: 11400000, guid: 00663d6c940b84c4f932f3ee9dc7b6b3, type: 2}
+  - id: grown_up
+    displayName: Grown Up
+    type: 6
+    target: 12
+    character: {fileID: 0}
+    reward: {fileID: 11400000, guid: 37061bf1467f282449f5d5304853c668, type: 2}
+  - id: blacksmith
+    displayName: Blacksmith
+    type: 7
+    target: 1
+    character: {fileID: 0}
+    reward: {fileID: 11400000, guid: d16f045ceeabea0459234a9d7984b7da, type: 2}
+  - id: dragon_slayer
+    displayName: Dragon Slayer
+    type: 1
+    target: 1
+    character: {fileID: 0}
+    reward: {fileID: 11400000, guid: e1cf401539fb89b4386cb25fde246030, type: 2}
+  - id: cursed_ground
+    displayName: Cursed Ground
+    type: 2
+    target: 2
+    character: {fileID: 0}
+    reward: {fileID: 11400000, guid: 35f7ea6c80d173942acd5a1e97901ce7, type: 2}
+  - id: nightmare
+    displayName: Nightmare
+    type: 2
+    target: 5
+    character: {fileID: 0}
+    reward: {fileID: 11400000, guid: 4dceed1cd2594fc4a9e2b0739abb4ab5, type: 2}
+  - id: win_pete
+    displayName: Pete's Harvest
+    type: 3
+    target: 1
+    character: {fileID: 11400000, guid: 58435c16da516364ba0aecab57ce0f4c, type: 2}
+    reward: {fileID: 11400000, guid: 9dbee1e6f0d7661418c9d645b33078fc, type: 2}
+  - id: win_lucy
+    displayName: Lucy's Harvest
+    type: 3
+    target: 1
+    character: {fileID: 11400000, guid: 593505af4ed77174585c406036edbff3, type: 2}
+    reward: {fileID: 11400000, guid: ac0f458a22f8a0e4696de838c22ca418, type: 2}
+  - id: win_hugo
+    displayName: Hugo's Harvest
+    type: 3
+    target: 1
+    character: {fileID: 11400000, guid: aadf3fa5acda7e542858c279e85901aa, type: 2}
+    reward: {fileID: 11400000, guid: baa0e60c57e4b534896880029f19d9a4, type: 2}
+  - id: win_maggie
+    displayName: Maggie's Harvest
+    type: 3
+    target: 1
+    character: {fileID: 11400000, guid: c68dc0660b124bc4b823237d942dab0b, type: 2}
+    reward: {fileID: 11400000, guid: c28904042221cf5488cb5dce1fb8c36e, type: 2}

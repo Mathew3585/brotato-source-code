@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e2af7a21d133a745b4ab8561c841f4c, type: 3}
+  m_Name: Weapon_Arrosoir_T2
+  m_EditorClassIdentifier: Assembly-CSharp::BrotatoLike.WeaponData
+  displayName: Watering Can II
+  tier: 2
+  price: 48
+  nextTier: {fileID: 11400000, guid: f2384c78547953f42a9079f896ee190b, type: 2}
+  kind: 0
+  sprite: {fileID: 21300000, guid: 8dfb7eb4494cbe14eabf0fda5056d27d, type: 3}
+  spriteScale: 1
+  spriteAngleOffset: 180
+  projectileSprite: {fileID: 21300000, guid: 2092e1ae9910a3743a653ebf2e627c0c, type: 3}
+  projectileScale: 0.6
+  projectileAngleOffset: -90
+  damage: 1.9200001
+  cooldown: 0.1104
+  range: 3.2
+  knockback: 0.055
+  critChance: 5
+  critMultiplier: 2
+  projectileSpeed: 9
+  projectilesPerShot: 1
+  spreadAngle: 0
+  inaccuracy: 15
+  pierce: 0
+  explosionRadius: 0
+  burstCount: 1
+  burstInterval: 0.08
+  slowAmount: 0.4
+  slowDuration: 1.5
+  turretSprite: {fileID: 0}
+  turretScale: 1
+  turretDuration: 7
+  turretFireInterval: 0.55200005
+  passiveModifiers: []
+  attackDuration: 0.25

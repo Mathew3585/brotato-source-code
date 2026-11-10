@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7841655596478708197
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3831112853083255988}
+  - component: {fileID: 797974815164213067}
+  m_Layer: 0
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3831112853083255988
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7841655596478708197}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &797974815164213067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7841655596478708197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd261dd744b572949b624f17138b4027, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BrotatoLike.AudioManager
+  config: {fileID: 11400000, guid: ac0a8eb60639df6429a7e12d007c1d18, type: 2}
+  playlist:
+  - {fileID: 8300000, guid: c810c2c36c6e8b64ebbbb98f2f529786, type: 3}
+  - {fileID: 8300000, guid: 2c0bfb384b98a6f44ba158e81c7adb98, type: 3}
+  - {fileID: 8300000, guid: 9a0836e5b72640341b96d2aeb84a1cac, type: 3}
+  - {fileID: 8300000, guid: d44b21cb903a3d24ebc873f9c41587b6, type: 3}
+  - {fileID: 8300000, guid: a79c00c5b25eb9d469e1076ffb60f009, type: 3}
+  - {fileID: 8300000, guid: 5fae74b33fe59904295e89eb7e23da19, type: 3}
+  - {fileID: 8300000, guid: 178dfcd728d5dd645ae095fb52f290b3, type: 3}
+  - {fileID: 8300000, guid: 2798d7be23613f24d8b80b85a5903ff4, type: 3}
+  - {fileID: 8300000, guid: 733c008cf8bd4d9418aac2c4b00de777, type: 3}
+  - {fileID: 8300000, guid: 48c5595007abb56448ad6ae18aaf3c32, type: 3}
+  - {fileID: 8300000, guid: ff152eb720c6bfe469d66dede398d03d, type: 3}
+  - {fileID: 8300000, guid: 974361a5b0c25744ab642c45d9215766, type: 3}
+  - {fileID: 8300000, guid: cfe919006a86d7b4780278fee60ba573, type: 3}
+  - {fileID: 8300000, guid: f56977fcf558ef944bb4afa1240c2c02, type: 3}
+  music: {fileID: 0}
+  musicVolume: 0.5
+  musicFadeIn: 1.5

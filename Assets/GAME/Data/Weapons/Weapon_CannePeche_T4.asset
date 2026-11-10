@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e2af7a21d133a745b4ab8561c841f4c, type: 3}
+  m_Name: Weapon_CannePeche_T4
+  m_EditorClassIdentifier: Assembly-CSharp::BrotatoLike.WeaponData
+  displayName: Fishing Rod IV
+  tier: 4
+  price: 81
+  nextTier: {fileID: 0}
+  kind: 1
+  sprite: {fileID: 21300000, guid: 1959adfdc5c338840858eec9307f0184, type: 3}
+  spriteScale: 1
+  spriteAngleOffset: -45
+  projectileSprite: {fileID: 0}
+  projectileScale: 1
+  projectileAngleOffset: -90
+  damage: 14
+  cooldown: 0.76
+  range: 3.2
+  knockback: -0.52
+  critChance: 9
+  critMultiplier: 2
+  projectileSpeed: 15
+  projectilesPerShot: 1
+  spreadAngle: 0
+  inaccuracy: 0
+  pierce: 0
+  explosionRadius: 0
+  burstCount: 1
+  burstInterval: 0.08
+  slowAmount: 0
+  slowDuration: 1.5
+  turretSprite: {fileID: 0}
+  turretScale: 1
+  turretDuration: 7
+  turretFireInterval: 0.45600003
+  passiveModifiers:
+  - stat: 9
+    value: 3.75
+  attackDuration: 0.28

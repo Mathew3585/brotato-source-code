@@ -1,0 +1,579 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Reflection;
+using UnityEditor;
+using UnityEngine;
+
+namespace CodeStage.PackageToFolder
+{
+	public static class Package2Folder
+	{
+		///////////////////////////////////////////////////////////////
+		// Delegates and properties with caching for reflection stuff
+		///////////////////////////////////////////////////////////////
+
+		#region reflection stuff
+
+		private delegate object[] ExtractAndPrepareAssetListDelegate(string packagePath, out string packageIconPath, out string packageManagerDependenciesPath);
+
+		private static Type packageUtilityType;
+		private static bool nativeImportPending;
+		private static Type PackageUtilityType
+		{
+			get
+			{
+				if (packageUtilityType == null)
+					packageUtilityType = typeof(MenuItem).Assembly.GetType("UnityEditor.AssetPackage.Utility") ??
+						typeof(MenuItem).Assembly.GetType("UnityEditor.PackageUtility");
+				return packageUtilityType;
+			}
+		}
+
+		private static ExtractAndPrepareAssetListDelegate extractAndPrepareAssetList;
+		private static ExtractAndPrepareAssetListDelegate ExtractAndPrepareAssetList
+		{
+			get
+			{
+				if (extractAndPrepareAssetList == null)
+				{
+					var method = PackageUtilityType.GetMethod("ExtractAndPrepareAssetList");
+					if (method == null)
+						throw new Exception("Couldn't extract method with ExtractAndPrepareAssetListDelegate delegate!");
+
+					extractAndPrepareAssetList = (ExtractAndPrepareAssetListDelegate)Delegate.CreateDelegate(
+					   typeof(ExtractAndPrepareAssetListDelegate),
+					   null,
+					   method);
+				}
+
+				return extractAndPrepareAssetList;
+			}
+		}
+
+		private static FieldInfo destinationAssetPathFieldInfo;
+		private static FieldInfo DestinationAssetPathFieldInfo
+		{
+			get
+			{
+				if (destinationAssetPathFieldInfo == null)
+				{
+					var importPackageItem = typeof(MenuItem).Assembly.GetType("UnityEditor.AssetPackage.ImportPackageItem") ??
+						typeof(MenuItem).Assembly.GetType("UnityEditor.ImportPackageItem");
+					destinationAssetPathFieldInfo = importPackageItem.GetField("destinationAssetPath");
+				}
+				return destinationAssetPathFieldInfo;
+			}
+		}
+
+		private static MethodInfo importPackageAssetsMethodInfo;
+		private static MethodInfo ImportPackageAssetsMethodInfo
+		{
+			get
+			{
+				if (importPackageAssetsMethodInfo == null)
+					importPackageAssetsMethodInfo = PackageUtilityType.GetMethod("ImportPackageAssets");
+
+				return importPackageAssetsMethodInfo;
+			}
+		}
+
+		private static MethodInfo importPackageAssetsWithOriginMethodInfo;
+		private static MethodInfo ImportPackageAssetsWithOriginMethodInfo
+		{
+			get
+			{
+				if (importPackageAssetsWithOriginMethodInfo == null)
+					importPackageAssetsWithOriginMethodInfo = PackageUtilityType.GetMethod("ImportPackageAssetsWithOrigin");
+
+				return importPackageAssetsWithOriginMethodInfo;
+			}
+		}
+
+		private static MethodInfo showImportPackageMethodInfo;
+		private static MethodInfo ShowImportPackageMethodInfo
+		{
+			get
+			{
+				if (showImportPackageMethodInfo == null)
+				{
+					showImportPackageMethodInfo = PackageImportType.GetMethod("ShowImportPackage");
+				}
+
+				return showImportPackageMethodInfo;
+			}
+		}
+
+		private static Type packageImportType;
+		private static Type PackageImportType
+		{
+			get
+			{
+				if (packageImportType == null)
+					packageImportType = typeof(MenuItem).Assembly.GetType("UnityEditor.PackageImport");
+				return packageImportType;
+			}
+		}
+
+		private static FieldInfo importPackageItemsFieldInfo;
+		private static FieldInfo ImportPackageItemsFieldInfo
+		{
+			get
+			{
+				if (importPackageItemsFieldInfo == null)
+					importPackageItemsFieldInfo = PackageImportType.GetField("m_ImportPackageItems", BindingFlags.NonPublic | BindingFlags.Instance);
+				return importPackageItemsFieldInfo;
+			}
+		}
+
+		private static FieldInfo treeFieldInfo;
+		private static FieldInfo TreeFieldInfo
+		{
+			get
+			{
+				if (treeFieldInfo == null)
+					treeFieldInfo = PackageImportType.GetField("m_Tree", BindingFlags.NonPublic | BindingFlags.Instance);
+				return treeFieldInfo;
+			}
+		}
+
+		#endregion reflection stuff
+
+		///////////////////////////////////////////////////////////////
+		// PackageImport window watcher
+		///////////////////////////////////////////////////////////////
+
+		[InitializeOnLoadMethod]
+		private static void SetupPackageImportWatcher()
+		{
+			EditorApplication.update -= WatchForPackageImportWindows;
+			EditorApplication.update += WatchForPackageImportWindows;
+		}
+
+		private static double nextWatchTime;
+
+		private static void WatchForPackageImportWindows()
+		{
+			if (nativeImportPending) return;
+			if (EditorApplication.timeSinceStartup < nextWatchTime) return;
+			nextWatchTime = EditorApplication.timeSinceStartup + 0.25;
+
+			var windows = Resources.FindObjectsOfTypeAll(PackageImportType);
+			if (windows == null || windows.Length == 0) return;
+
+			foreach (var window in windows)
+			{
+				var editorWindow = window as EditorWindow;
+				if (editorWindow != null)
+					Package2FolderCompanion.ShowForImportWindow(editorWindow);
+			}
+		}
+
+		///////////////////////////////////////////////////////////////
+		// Unity Editor menus integration
+		///////////////////////////////////////////////////////////////
+
+		private static Func<string> selectPackage = () => EditorUtility.OpenFilePanel("Import package ...", "", "unitypackage");
+
+		[MenuItem("Assets/Import Package/Here...", true)]
+		private static bool IsImportToFolderCheck()
+		{
+			var selectedFolderPath = GetSelectedFolderPath();
+			return !string.IsNullOrEmpty(selectedFolderPath);
+		}
+
+		[MenuItem("Assets/Import Package/Here...", false)]
+		private static void Package2FolderCommand()
+		{
+			var selectedFolderPath = GetSelectedFolderPath();
+			var packagePath = selectPackage();
+			if (string.IsNullOrEmpty(packagePath)) return;
+			if (!File.Exists(packagePath)) return;
+
+			ImportPackageToFolder(packagePath, selectedFolderPath, true);
+		}
+
+		///////////////////////////////////////////////////////////////
+		// Main logic
+		///////////////////////////////////////////////////////////////
+
+		/// <summary>
+		/// Allows to import package to the specified folder either via standard import window or silently.
+		/// </summary>
+		/// <remarks>
+		/// On Unity 6.5+, native preparation briefly opens an import window even for non-interactive imports.
+		/// These imports require a graphics device and complete asynchronously after this method returns.
+		/// </remarks>
+		/// <param name="packagePath">Native path to the package.</param>
+		/// <param name="selectedFolderPath">Path to the target folder where you wish to import package into.
+		/// Relative to the project folder (should start with 'Assets')</param>
+		/// <param name="interactive">If true - imports using standard import window, otherwise does this silently.</param>
+		/// <param name="assetOrigin">An optional UnityEditor.AssetOrigin object which Unity from version 2023+ uses internally to store the source of the imported asset inside the meta file.</param>
+		public static void ImportPackageToFolder(string packagePath, string selectedFolderPath, bool interactive, object assetOrigin = null)
+		{
+			selectedFolderPath = ValidateTargetFolder(selectedFolderPath);
+			if (nativeImportPending || Resources.FindObjectsOfTypeAll(PackageImportType).Length != 0)
+				throw new InvalidOperationException("Finish or cancel the current package import before starting another.");
+
+			if (PackageUtilityType.GetMethod("ExtractAndPrepareAssetList") == null)
+			{
+				ImportUsingNativePreparation(packagePath, selectedFolderPath, interactive, assetOrigin);
+				return;
+			}
+
+			string packageIconPath;
+			string packageManagerDependenciesPath;
+			var assetsItems = ExtractAndPrepareAssetList(packagePath, out packageIconPath, out packageManagerDependenciesPath);
+
+			if (assetsItems == null) return;
+
+			var originalPaths = interactive
+				? Array.ConvertAll(assetsItems, item => (string)DestinationAssetPathFieldInfo.GetValue(item)) : null;
+			foreach (var item in assetsItems) ChangeAssetItemPath(item, selectedFolderPath);
+
+			if (interactive)
+			{
+				ShowImportPackageWindow(packagePath, assetsItems, packageIconPath, assetOrigin);
+				var window = (EditorWindow)Resources.FindObjectsOfTypeAll(PackageImportType)[0];
+				Package2FolderCompanion.ShowForImportWindow(window, selectedFolderPath, originalPaths);
+			}
+			else
+			{
+				var fileNameWithoutExtension = Path.GetFileNameWithoutExtension(packagePath);
+				ImportPackageSilently(fileNameWithoutExtension, assetsItems, assetOrigin);
+			}
+		}
+
+		public static void ChangeAssetItemPath(object assetItem, string selectedFolderPath)
+		{
+			selectedFolderPath = ValidateTargetFolder(selectedFolderPath);
+
+			string destinationPath = (string)DestinationAssetPathFieldInfo.GetValue(assetItem);
+			if (destinationPath.StartsWith("Packages/")) return;
+
+			int firstSlashIndex = destinationPath.IndexOf('/');
+			if (firstSlashIndex >= 0)
+			{
+				string relativePath = destinationPath.Substring(firstSlashIndex);
+				destinationPath = selectedFolderPath + relativePath;
+			}
+			else
+			{
+				destinationPath = selectedFolderPath + "/" + destinationPath;
+			}
+
+			DestinationAssetPathFieldInfo.SetValue(assetItem, destinationPath);
+		}
+
+		public static void ShowImportPackageWindow(string path, object[] array, string packageIconPath, object assetOrigin = null)
+		{
+			if (ShowImportPackageMethodInfo.GetParameters()[1].ParameterType == typeof(IntPtr))
+			{
+				var wizard = GetImportWizard();
+				var origin = assetOrigin ?? Activator.CreateInstance(typeof(MenuItem).Assembly.GetType("UnityEditor.AssetOrigin"));
+				var startImport = wizard.GetType().GetMethod("StartImport");
+				var arguments = new List<object> { path, array, packageIconPath, origin, GetExtractedPackagePath(array) };
+				if (startImport.GetParameters().Length == 6)
+				{
+					var preparedPath = (string)wizard.GetType().GetField("m_PackagePath", BindingFlags.Instance | BindingFlags.NonPublic).GetValue(wizard);
+					if (string.IsNullOrEmpty(preparedPath) || Path.GetFullPath(preparedPath) != Path.GetFullPath(path))
+						throw new InvalidOperationException("Prepare this package with Unity before opening its import window.");
+					arguments.Add(wizard.GetType().GetProperty("assetPackageInfo").GetValue(wizard));
+				}
+				startImport.Invoke(wizard, arguments.ToArray());
+				return;
+			}
+#if UNITY_2023_1_OR_NEWER
+			int productId = 0;
+			string packageName = null;
+			string packageVersion = null;
+			int uploadId = 0;
+			if (assetOrigin != null) {
+				Type assetOriginType = Type.GetType("UnityEditor.AssetOrigin, UnityEditor.CoreModule");
+				if (assetOriginType != null)
+				{
+					FieldInfo productIdProp = assetOriginType.GetField("productId");
+					FieldInfo packageVersionProp = assetOriginType.GetField("packageVersion");
+					FieldInfo packageNameProp = assetOriginType.GetField("packageName");
+					FieldInfo uploadIdProp = assetOriginType.GetField("uploadId");
+
+					if (productIdProp != null) productId = productIdProp.GetValue(assetOrigin) as int? ?? 0;
+					if (packageVersionProp != null) packageVersion = packageVersionProp.GetValue(assetOrigin) as string;
+					if (packageNameProp != null) packageName = packageNameProp.GetValue(assetOrigin) as string;
+					if (uploadIdProp != null) uploadId = uploadIdProp.GetValue(assetOrigin) as int? ?? 0;
+				}
+			}
+			ShowImportPackageMethodInfo.Invoke(null, new object[]
+			{
+				path, array, packageIconPath, productId, packageName, packageVersion, uploadId
+			});
+#else
+			ShowImportPackageMethodInfo.Invoke(null, new object[]
+			{
+				path, array, packageIconPath
+			});
+#endif
+		}
+
+		public static void ImportPackageSilently(string packageName, object[] assetsItems, object assetOrigin = null)
+		{
+			var method = assetOrigin != null ? ImportPackageAssetsWithOriginMethodInfo : ImportPackageAssetsMethodInfo;
+			var firstArgument = assetOrigin ?? (object)packageName;
+			var arguments = ImportPackageAssetsMethodInfo.GetParameters().Length == 4
+				? new object[] { firstArgument, assetsItems, GetExtractedPackagePath(assetsItems), false }
+				: new[] { firstArgument, assetsItems };
+			method.Invoke(null, arguments);
+		}
+
+		///////////////////////////////////////////////////////////////
+		// PackageImport window helpers
+		///////////////////////////////////////////////////////////////
+
+		internal static object[] GetImportPackageItems(EditorWindow importWindow)
+		{
+			return ImportPackageItemsFieldInfo.GetValue(importWindow) as object[];
+		}
+
+		internal static string[] GetImportItemPaths(EditorWindow importWindow)
+		{
+			var items = GetImportPackageItems(importWindow);
+			if (items == null) return null;
+
+			var paths = new string[items.Length];
+			for (int i = 0; i < items.Length; i++)
+			{
+				paths[i] = (string)DestinationAssetPathFieldInfo.GetValue(items[i]);
+			}
+			return paths;
+		}
+
+		internal static void SetImportWindowFolder(EditorWindow importWindow, string selectedFolderPath, string[] originalPaths)
+		{
+			var items = GetImportPackageItems(importWindow);
+			if (items == null) return;
+
+			// Restore original paths first to avoid stacking folder prefixes
+			if (originalPaths != null)
+			{
+				for (int i = 0; i < items.Length && i < originalPaths.Length; i++)
+				{
+					DestinationAssetPathFieldInfo.SetValue(items[i], originalPaths[i]);
+				}
+			}
+
+			// Apply new folder
+			foreach (var item in items)
+			{
+				ChangeAssetItemPath(item, selectedFolderPath);
+			}
+
+			// Reset tree view to force rebuild
+			TreeFieldInfo.SetValue(importWindow, null);
+			importWindow.Repaint();
+		}
+
+		///////////////////////////////////////////////////////////////
+		// Utility methods
+		///////////////////////////////////////////////////////////////
+
+		private static string ValidateTargetFolder(string folder)
+		{
+			var normalized = folder?.Replace('\\', '/').TrimEnd('/');
+			if (string.IsNullOrEmpty(normalized) ||
+				(normalized != "Assets" && !normalized.StartsWith("Assets/", StringComparison.Ordinal)) ||
+				Array.IndexOf(normalized.Split('/'), "..") >= 0)
+				throw new ArgumentException("The target folder must be inside Assets.", nameof(folder));
+			return normalized;
+		}
+
+		private static object GetImportWizard()
+		{
+			var type = typeof(MenuItem).Assembly.GetType("UnityEditor.PackageImportWizard");
+			return type.GetProperty("instance", BindingFlags.Public | BindingFlags.Static | BindingFlags.FlattenHierarchy).GetValue(null);
+		}
+
+		private static string GetExtractedPackagePath(object[] items)
+		{
+			if (items == null || items.Length == 0)
+				throw new ArgumentException("At least one prepared import item is required.", nameof(items));
+			var source = (string)items[0].GetType().GetField("sourceFolder").GetValue(items[0]);
+			return Path.GetDirectoryName(source);
+		}
+
+		private static void ImportUsingNativePreparation(string packagePath, string folder, bool interactive, object origin)
+		{
+			if (SystemInfo.graphicsDeviceType == UnityEngine.Rendering.GraphicsDeviceType.Null)
+				throw new NotSupportedException("Native package preparation requires a graphics device. Run Unity without -nographics.");
+			packagePath = Path.GetFullPath(packagePath);
+			if (!File.Exists(packagePath)) throw new FileNotFoundException("Package not found.", packagePath);
+			nativeImportPending = true;
+			EditorApplication.update += RedirectPreparedImport;
+			AssetDatabase.importPackageFailed += ImportFailed;
+			AssetDatabase.importPackageCancelled += ImportCancelled;
+			AssetDatabase.importPackageCompleted += ImportCancelled;
+			try { AssetDatabase.ImportPackage(packagePath, true); }
+			catch { StopWaiting(); throw; }
+
+			void StopWaiting()
+			{
+				nativeImportPending = false;
+				EditorApplication.update -= RedirectPreparedImport;
+				AssetDatabase.importPackageFailed -= ImportFailed;
+				AssetDatabase.importPackageCancelled -= ImportCancelled;
+				AssetDatabase.importPackageCompleted -= ImportCancelled;
+			}
+
+			void ImportFailed(string name, string error) { ImportCancelled(name); }
+			void ImportCancelled(string name)
+			{
+				if (name == Path.GetFileNameWithoutExtension(packagePath)) StopWaiting();
+			}
+
+			void RedirectPreparedImport()
+			{
+				EditorWindow ownedWindow = null;
+				try
+				{
+					var wizard = GetImportWizard();
+					var type = wizard.GetType();
+					const BindingFlags fields = BindingFlags.Instance | BindingFlags.NonPublic;
+					var path = (string)type.GetField("m_PackagePath", fields).GetValue(wizard);
+					var window = type.GetField("m_ImportWindow", fields).GetValue(wizard) as EditorWindow;
+					if (window == null || string.IsNullOrEmpty(path) || Path.GetFullPath(path) != packagePath)
+						return;
+					ownedWindow = window;
+
+					var items = (object[])type.GetField("m_InitialImportItems", fields).GetValue(wizard);
+					if (items == null) return;
+					StopWaiting();
+					if (interactive) Package2FolderCompanion.ShowForImportWindow(window, folder);
+					foreach (var item in items) ChangeAssetItemPath(item, folder);
+					if (interactive)
+					{
+						if (origin != null) type.GetField("m_AssetOrigin", fields).SetValue(wizard, origin);
+						TreeFieldInfo.SetValue(window, null);
+						window.Repaint();
+					}
+					else
+					{
+						ImportPackageSilently(Path.GetFileNameWithoutExtension(packagePath), items, origin);
+						window.Close();
+						type.GetMethod("ClearImportData", fields).Invoke(wizard, null);
+					}
+				}
+				catch (Exception exception)
+				{
+					StopWaiting();
+					if (ownedWindow != null) ownedWindow.Close();
+					Debug.LogException(exception);
+				}
+			}
+		}
+
+		private static string GetSelectedFolderPath()
+		{
+			if (Selection.assetGUIDs == null || Selection.assetGUIDs.Length == 0)
+				return null;
+
+			var assetGuid = Selection.assetGUIDs[0];
+			var path = AssetDatabase.GUIDToAssetPath(assetGuid);
+			return AssetDatabase.IsValidFolder(path) &&
+				(path == "Assets" || path.StartsWith("Assets/", StringComparison.Ordinal)) ? path : null;
+		}
+	}
+
+	internal class Package2FolderCompanion : EditorWindow
+	{
+		private static readonly HashSet<EditorWindow> shownImportWindows = new HashSet<EditorWindow>();
+
+		[SerializeField] private EditorWindow importWindow;
+		[SerializeField] private string[] originalPaths;
+		[SerializeField] private string selectedFolder;
+
+		internal static void ShowForImportWindow(EditorWindow importWindow, string selectedFolder = null, string[] originalPaths = null)
+		{
+			shownImportWindows.RemoveWhere(window => window == null);
+			if (shownImportWindows.Contains(importWindow))
+				return;
+
+			var companion = CreateInstance<Package2FolderCompanion>();
+			companion.importWindow = importWindow;
+			companion.selectedFolder = selectedFolder;
+			companion.titleContent = new GUIContent("Package2Folder");
+			companion.originalPaths = originalPaths ?? Package2Folder.GetImportItemPaths(importWindow);
+			companion.ShowUtility();
+			companion.PositionNearImportWindow();
+			shownImportWindows.Add(importWindow);
+		}
+
+		private void PositionNearImportWindow()
+		{
+			if (importWindow == null) return;
+
+			var importPos = importWindow.position;
+			position = new Rect(
+				importPos.x + importPos.width + 10,
+				importPos.y,
+				220,
+				60
+			);
+		}
+
+		private void OnEnable()
+		{
+			if (importWindow != null)
+				shownImportWindows.Add(importWindow);
+		}
+
+		private void Update()
+		{
+			if (importWindow == null)
+			{
+				Close();
+			}
+		}
+
+		private void OnGUI()
+		{
+			if (GUILayout.Button("Import to Folder...", GUILayout.Height(30)))
+			{
+				SelectFolderAndModifyPaths();
+			}
+
+			if (!string.IsNullOrEmpty(selectedFolder))
+			{
+				EditorGUILayout.LabelField("Target: " + selectedFolder, EditorStyles.miniLabel);
+			}
+		}
+
+		private void SelectFolderAndModifyPaths()
+		{
+			var absolutePath = EditorUtility.OpenFolderPanel("Select target folder", "Assets", "");
+			if (string.IsNullOrEmpty(absolutePath)) return;
+			if (importWindow == null) return;
+
+			absolutePath = absolutePath.Replace('\\', '/');
+			var dataPath = Application.dataPath.Replace('\\', '/');
+
+			string relativePath;
+			if (absolutePath == dataPath)
+			{
+				relativePath = "Assets";
+			}
+			else if (absolutePath.StartsWith(dataPath + "/"))
+			{
+				relativePath = "Assets" + absolutePath.Substring(dataPath.Length);
+			}
+			else
+			{
+				EditorUtility.DisplayDialog("Invalid Folder",
+					"Please select a folder inside the Assets directory.", "OK");
+				return;
+			}
+
+			selectedFolder = relativePath;
+			Package2Folder.SetImportWindowFolder(importWindow, selectedFolder, originalPaths);
+			Repaint();
+		}
+	}
+}

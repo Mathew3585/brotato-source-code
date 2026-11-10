@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 184e51b7c0e068f438847f2df7c3555f, type: 3}
+  m_Name: AudioConfig
+  m_EditorClassIdentifier: Assembly-CSharp::BrotatoLike.AudioConfig
+  combat: {fileID: 11400000, guid: f006b98d4c6380247b430b1a2eefbfb0, type: 2}
+  interfaceUtilisateur: {fileID: 11400000, guid: 93784f25f47b74c47b4fa616ee22da20, type: 2}
+  boutique: {fileID: 11400000, guid: db6715ceb941b3142ac0dd01d8aa4cb1, type: 2}
+  partie: {fileID: 11400000, guid: 2145f01bf6f62534f9c475de1b00831b, type: 2}
+  ramassage: {fileID: 11400000, guid: d88a04fe0c7c0c04790ba331e62f3a2d, type: 2}

@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02b1dce8c704076499b1382628aac651, type: 3}
+  m_Name: Enemy_Squelette_pirate
+  m_EditorClassIdentifier: Assembly-CSharp::BrotatoLike.EnemyData
+  displayName: Pirate Skeleton
+  behavior: 0
+  isBoss: 0
+  runFrames:
+  - {fileID: 1782705385, guid: d33598d781682e049a53a0a13104ef29, type: 3}
+  - {fileID: 1544975445, guid: d33598d781682e049a53a0a13104ef29, type: 3}
+  - {fileID: 33490002, guid: d33598d781682e049a53a0a13104ef29, type: 3}
+  - {fileID: 877188646, guid: d33598d781682e049a53a0a13104ef29, type: 3}
+  - {fileID: 393441404, guid: d33598d781682e049a53a0a13104ef29, type: 3}
+  - {fileID: -595425931, guid: d33598d781682e049a53a0a13104ef29, type: 3}
+  hitSprite: {fileID: -1523209149, guid: d33598d781682e049a53a0a13104ef29, type: 3}
+  deadSprite: {fileID: 1253841367, guid: d33598d781682e049a53a0a13104ef29, type: 3}
+  animFps: 10
+  scale: 1
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  facesLeft: 0
+  rotateToDirection: 0
+  rotationOffset: -90
+  debrisColor: {r: 0.85, g: 0.8, b: 0.85, a: 1}
+  bobAmount: 0.08
+  maxHealth: 7
+  healthPerWave: 2.5
+  moveSpeed: 2.3
+  contactDamage: 1.5
+  damagePerWave: 0.5
+  radius: 0.35
+  knockbackResistance: 0.1
+  projectileSprite: {fileID: 0}
+  projectileColor: {r: 1, g: 1, b: 1, a: 1}
+  projectileScale: 1
+  projectileSpeed: 5
+  projectileDamage: 1
+  projectileDamagePerWave: 0.25
+  fireInterval: 2
+  projectilesPerShot: 1
+  projectileSpread: 0
+  preferredDistance: 5
+  chargeTriggerDistance: 5
+  chargeWindup: 0.6
+  chargeSpeed: 9
+  chargeDuration: 0.45
+  splitInto: {fileID: 0}
+  splitCount: 0
+  materialDrop: 2
+  dropChance: 1
+  crateChance: 0

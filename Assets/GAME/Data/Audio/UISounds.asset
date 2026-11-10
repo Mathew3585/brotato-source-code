@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e1c3085548e1884791ca396529941f9, type: 3}
+  m_Name: UISounds
+  m_EditorClassIdentifier: Assembly-CSharp::BrotatoLike.UISounds
+  selection:
+    clips:
+    - {fileID: 8300000, guid: ca3aec926db2bee40b1c77f9aee8926f, type: 3}
+    volume: 0.3
+    pitchMin: 0.97
+    pitchMax: 1.03
+    minInterval: 0.03
+  valider:
+    clips:
+    - {fileID: 8300000, guid: fc5f240f0615d87468ece5f8c582adea, type: 3}
+    volume: 0.5
+    pitchMin: 1
+    pitchMax: 1
+    minInterval: 0.05
+  retour:
+    clips:
+    - {fileID: 8300000, guid: 4b3b0dd207c6aed459171417b4bc492c, type: 3}
+    volume: 0.5
+    pitchMin: 1
+    pitchMax: 1
+    minInterval: 0.05
+  pause:
+    clips:
+    - {fileID: 8300000, guid: 5a66c886b57d9a0418c8d6039d7fb9ec, type: 3}
+    volume: 0.5
+    pitchMin: 1
+    pitchMax: 1
+    minInterval: 0.1
+  joueurRejoint:
+    clips:
+    - {fileID: 8300000, guid: 7eb624a57aecb18478dbf27ab0d537e2, type: 3}
+    volume: 0.6
+    pitchMin: 1
+    pitchMax: 1
+    minInterval: 0.05
+  pret:
+    clips:
+    - {fileID: 8300000, guid: d5a723390b1e26b40b54ecc5122ea477, type: 3}
+    volume: 0.55
+    pitchMin: 1
+    pitchMax: 1
+    minInterval: 0.05
+  changementPersonnage:
+    clips:
+    - {fileID: 8300000, guid: af31e0fb761dc6d4bb22e6294370976f, type: 3}
+    - {fileID: 8300000, guid: 312c3b1aeaa5a0746bdb84a2c4ed30d7, type: 3}
+    volume: 0.45
+    pitchMin: 1
+    pitchMax: 1.05
+    minInterval: 0.03

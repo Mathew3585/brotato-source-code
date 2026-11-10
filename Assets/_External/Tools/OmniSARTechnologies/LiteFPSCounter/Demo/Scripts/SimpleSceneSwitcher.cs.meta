@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: d44d12ad28703d145a8e77243b81a15c
+timeCreated: 1541090604
+licenseType: Store
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 132638
+  packageName: Lite FPS Counter - Probably the world's fastest FPS counter
+  packageVersion: 1.0.1
+  assetPath: Assets/OmniSARTechnologies/LiteFPSCounter/Demo/Scripts/SimpleSceneSwitcher.cs
+  uploadId: 739912

@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e2af7a21d133a745b4ab8561c841f4c, type: 3}
+  m_Name: Weapon_Revolver_T2
+  m_EditorClassIdentifier: Assembly-CSharp::BrotatoLike.WeaponData
+  displayName: Revolver II
+  tier: 2
+  price: 53
+  nextTier: {fileID: 11400000, guid: 4983a96c3e03a22439fa0cf8adaf7c7f, type: 2}
+  kind: 0
+  statScaling: 1
+  sprite: {fileID: 21300000, guid: a8eff05b4f942064cb43f8371d6e1677, type: 3}
+  spriteScale: 1
+  spriteAngleOffset: 0
+  projectileSprite: {fileID: 21300000, guid: 963c023c5edf48848b7840d2f00a8687, type: 3}
+  projectileScale: 1
+  projectileAngleOffset: 0
+  damage: 19.2
+  cooldown: 1.012
+  range: 8
+  knockback: 0.66
+  critChance: 17
+  critMultiplier: 2.5
+  projectileSpeed: 24
+  projectilesPerShot: 1
+  spreadAngle: 0
+  inaccuracy: 0
+  pierce: 0
+  explosionRadius: 0
+  burstCount: 1
+  burstInterval: 0.08
+  slowAmount: 0
+  slowDuration: 1.5
+  turretSprite: {fileID: 0}
+  turretScale: 1
+  turretDuration: 7
+  turretFireInterval: 0.55200005
+  passiveModifiers: []
+  attackDuration: 0.25

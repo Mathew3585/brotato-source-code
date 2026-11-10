@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 34a67760256cfde4c895b9919415426f
+timeCreated: 1541774266
+licenseType: Store
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 132638
+  packageName: Lite FPS Counter - Probably the world's fastest FPS counter
+  packageVersion: 1.0.1
+  assetPath: Assets/OmniSARTechnologies/LiteFPSCounter/Documentation/LiteFPSCounter-Manual.pdf
+  uploadId: 739912

@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e2af7a21d133a745b4ab8561c841f4c, type: 3}
+  m_Name: Weapon_Pistolet_T4
+  m_EditorClassIdentifier: Assembly-CSharp::BrotatoLike.WeaponData
+  displayName: Pistol IV
+  tier: 4
+  price: 56
+  nextTier: {fileID: 0}
+  kind: 0
+  sprite: {fileID: 21300000, guid: 920f1d9cf86c0744cb30411c9542cf42, type: 3}
+  spriteScale: 1
+  spriteAngleOffset: 0
+  projectileSprite: {fileID: 21300000, guid: 8d3f2d4e6f2505a4cb546267d4fb5f52, type: 3}
+  projectileScale: 1
+  projectileAngleOffset: 0
+  damage: 8.400001
+  cooldown: 0.30400002
+  range: 6
+  knockback: 0.39000002
+  critChance: 9
+  critMultiplier: 2
+  projectileSpeed: 18
+  projectilesPerShot: 1
+  spreadAngle: 0
+  inaccuracy: 0
+  pierce: 0
+  explosionRadius: 0
+  burstCount: 1
+  burstInterval: 0.08
+  slowAmount: 0
+  slowDuration: 1.5
+  turretSprite: {fileID: 0}
+  turretScale: 1
+  turretDuration: 7
+  turretFireInterval: 0.45600003
+  passiveModifiers: []
+  attackDuration: 0.25

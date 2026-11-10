@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e88a789a5b0a6344b22cd6edf75b12e, type: 3}
+  m_Name: EmoteSet
+  m_EditorClassIdentifier: Assembly-CSharp::BrotatoLike.EmoteSet
+  emotes:
+  - {fileID: 21300000, guid: 9f4722fb1a7f390448ad6ef7d4222f95, type: 3}
+  - {fileID: 21300000, guid: 8649198b9f25f9141900fc07141a5bb2, type: 3}
+  - {fileID: 21300000, guid: dd989e5e6b1277343a9b6e681a714c1c, type: 3}
+  - {fileID: 21300000, guid: bf70158c13cbf1f46aacea2cad97054e, type: 3}
+  - {fileID: 21300000, guid: 42418bd68951acc4dafda970faffda53, type: 3}
+  - {fileID: 21300000, guid: 3eb02e834be428b4587326b98d0418a3, type: 3}
+  - {fileID: 21300000, guid: 033365a4800a1494baba0b8104320a1d, type: 3}
+  - {fileID: 21300000, guid: 8da40a1b1fe2a4644ad06c025d9e5f98, type: 3}
+  slotSprite: {fileID: 21300000, guid: b6ea6f8162ac3b14b9a75ee3b7cae860, type: 3}
+  wheelRadius: 1.35
+  slotSize: 0.8
+  iconScale: 1.8
+  selectedScale: 1.35
+  bubbleHeight: 1.3
+  bubbleSize: 1
+  bubbleIconScale: 2.4
+  showDuration: 2.5
+  cooldown: 0.6

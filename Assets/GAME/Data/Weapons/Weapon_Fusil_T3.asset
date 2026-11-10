@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e2af7a21d133a745b4ab8561c841f4c, type: 3}
+  m_Name: Weapon_Fusil_T3
+  m_EditorClassIdentifier: Assembly-CSharp::BrotatoLike.WeaponData
+  displayName: Rifle III
+  tier: 3
+  price: 56
+  nextTier: {fileID: 11400000, guid: faa7cb05252c2c74aa605b5e53db6c16, type: 2}
+  kind: 0
+  sprite: {fileID: -353751291, guid: 0d5e657ee5a074e4baa53d5b248a01d2, type: 3}
+  spriteScale: 0.8
+  spriteAngleOffset: 0
+  projectileSprite: {fileID: 154122315, guid: 0d5e657ee5a074e4baa53d5b248a01d2, type: 3}
+  projectileScale: 1
+  projectileAngleOffset: -90
+  damage: 8.8
+  cooldown: 0.504
+  range: 7
+  knockback: 0.3
+  critChance: 7
+  critMultiplier: 2
+  projectileSpeed: 16
+  projectilesPerShot: 1
+  spreadAngle: 0
+  inaccuracy: 0
+  pierce: 0
+  explosionRadius: 0
+  burstCount: 1
+  burstInterval: 0.08
+  slowAmount: 0
+  slowDuration: 1.5
+  turretSprite: {fileID: 0}
+  turretScale: 1
+  turretDuration: 7
+  turretFireInterval: 0.504
+  passiveModifiers: []
+  attackDuration: 0.25

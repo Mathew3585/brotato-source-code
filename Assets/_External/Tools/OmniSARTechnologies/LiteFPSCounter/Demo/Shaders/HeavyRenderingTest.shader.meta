@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 32da936b0f330aa44ba91b828d50e11f
+timeCreated: 1540913139
+licenseType: Store
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 132638
+  packageName: Lite FPS Counter - Probably the world's fastest FPS counter
+  packageVersion: 1.0.1
+  assetPath: Assets/OmniSARTechnologies/LiteFPSCounter/Demo/Shaders/HeavyRenderingTest.shader
+  uploadId: 739912

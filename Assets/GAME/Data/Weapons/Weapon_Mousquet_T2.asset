@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e2af7a21d133a745b4ab8561c841f4c, type: 3}
+  m_Name: Weapon_Mousquet_T2
+  m_EditorClassIdentifier: Assembly-CSharp::BrotatoLike.WeaponData
+  displayName: Musket II
+  tier: 2
+  price: 66
+  nextTier: {fileID: 11400000, guid: eef633ce9e3ac834cbfa25b9e612c3a1, type: 2}
+  kind: 0
+  sprite: {fileID: 1772703093, guid: 0d5e657ee5a074e4baa53d5b248a01d2, type: 3}
+  spriteScale: 0.8
+  spriteAngleOffset: 0
+  projectileSprite: {fileID: -537537479, guid: 0d5e657ee5a074e4baa53d5b248a01d2, type: 3}
+  projectileScale: 1
+  projectileAngleOffset: -90
+  damage: 16
+  cooldown: 1.472
+  range: 10
+  knockback: 0.88
+  critChance: 12
+  critMultiplier: 2
+  projectileSpeed: 22
+  projectilesPerShot: 1
+  spreadAngle: 0
+  inaccuracy: 0
+  pierce: 2
+  explosionRadius: 0
+  burstCount: 1
+  burstInterval: 0.08
+  slowAmount: 0
+  slowDuration: 1.5
+  turretSprite: {fileID: 0}
+  turretScale: 1
+  turretDuration: 7
+  turretFireInterval: 0.55200005
+  passiveModifiers: []
+  attackDuration: 0.25

@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02b1dce8c704076499b1382628aac651, type: 3}
+  m_Name: Enemy_Squelette
+  m_EditorClassIdentifier: Assembly-CSharp::BrotatoLike.EnemyData
+  displayName: Skeleton
+  behavior: 0
+  isBoss: 0
+  runFrames:
+  - {fileID: -2092964637, guid: 4104ee12b4d54f54b91b3ba875787837, type: 3}
+  - {fileID: -1199710013, guid: 4104ee12b4d54f54b91b3ba875787837, type: 3}
+  - {fileID: -1584422274, guid: 4104ee12b4d54f54b91b3ba875787837, type: 3}
+  - {fileID: 2078964560, guid: 4104ee12b4d54f54b91b3ba875787837, type: 3}
+  - {fileID: -971271808, guid: 4104ee12b4d54f54b91b3ba875787837, type: 3}
+  - {fileID: 86454189, guid: 4104ee12b4d54f54b91b3ba875787837, type: 3}
+  hitSprite: {fileID: 1151968089, guid: 4104ee12b4d54f54b91b3ba875787837, type: 3}
+  deadSprite: {fileID: 297993398, guid: 4104ee12b4d54f54b91b3ba875787837, type: 3}
+  animFps: 8
+  scale: 1
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  facesLeft: 0
+  rotateToDirection: 0
+  rotationOffset: -90
+  debrisColor: {r: 0.9, g: 0.9, b: 0.85, a: 1}
+  bobAmount: 0.08
+  maxHealth: 9
+  healthPerWave: 3
+  moveSpeed: 1.5
+  contactDamage: 2
+  damagePerWave: 0.55
+  radius: 0.35
+  knockbackResistance: 0.3
+  projectileSprite: {fileID: 0}
+  projectileColor: {r: 1, g: 1, b: 1, a: 1}
+  projectileScale: 1
+  projectileSpeed: 5
+  projectileDamage: 1
+  projectileDamagePerWave: 0.25
+  fireInterval: 2
+  projectilesPerShot: 1
+  projectileSpread: 0
+  preferredDistance: 5
+  chargeTriggerDistance: 5
+  chargeWindup: 0.6
+  chargeSpeed: 9
+  chargeDuration: 0.45
+  splitInto: {fileID: 0}
+  splitCount: 0
+  materialDrop: 2
+  dropChance: 1
+  crateChance: 0

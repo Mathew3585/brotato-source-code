@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecbb37b74298c004a8b4f79b1c888662, type: 3}
+  m_Name: JuiceSettings
+  m_EditorClassIdentifier: Assembly-CSharp::BrotatoLike.JuiceSettings
+  hitSquash: 0.28
+  hitSquashTime: 0.12
+  hitSparks: 2
+  killShake: 0.05
+  deathPop: 0.4
+  pickupPopTime: 0.18
+  pickupPitchStep: 0.04
+  pickupPitchMax: 1.7
+  pickupComboWindow: 0.45
+  levelUpDebris: 26
+  levelUpShake: 0.15
+  levelUpColor: {r: 1, g: 0.9, b: 0.35, a: 1}
+  lowHealthThreshold: 0.3
+  lowHealthVignette: 0.12
+  timerWarningSeconds: 5
+  hudPunch: 0.25

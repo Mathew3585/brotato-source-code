@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02b1dce8c704076499b1382628aac651, type: 3}
+  m_Name: "Enemy_Scarab\xE9e"
+  m_EditorClassIdentifier: Assembly-CSharp::BrotatoLike.EnemyData
+  displayName: Beetle
+  behavior: 2
+  isBoss: 0
+  runFrames:
+  - {fileID: 21300006, guid: a50747b7090647445a1aa71f3aefd771, type: 3}
+  - {fileID: 21300008, guid: a50747b7090647445a1aa71f3aefd771, type: 3}
+  - {fileID: 21300010, guid: a50747b7090647445a1aa71f3aefd771, type: 3}
+  hitSprite: {fileID: 0}
+  deadSprite: {fileID: 0}
+  animFps: 8
+  scale: 1
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  facesLeft: 0
+  rotateToDirection: 1
+  rotationOffset: -90
+  debrisColor: {r: 0.55, g: 0.3, b: 0.7, a: 1}
+  bobAmount: 0.08
+  maxHealth: 7
+  healthPerWave: 2.5
+  moveSpeed: 1.8
+  contactDamage: 2
+  damagePerWave: 0.5
+  radius: 0.35
+  knockbackResistance: 0
+  projectileSprite: {fileID: 0}
+  projectileColor: {r: 1, g: 1, b: 1, a: 1}
+  projectileScale: 1
+  projectileSpeed: 5
+  projectileDamage: 1
+  projectileDamagePerWave: 0.25
+  fireInterval: 2
+  projectilesPerShot: 1
+  projectileSpread: 0
+  preferredDistance: 5
+  chargeTriggerDistance: 5
+  chargeWindup: 0.6
+  chargeSpeed: 9
+  chargeDuration: 0.45
+  splitInto: {fileID: 0}
+  splitCount: 0
+  materialDrop: 2
+  dropChance: 1
+  crateChance: 0

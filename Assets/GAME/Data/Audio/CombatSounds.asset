@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0318fcb597ed8af47b9259c41f102193, type: 3}
+  m_Name: CombatSounds
+  m_EditorClassIdentifier: Assembly-CSharp::BrotatoLike.CombatSounds
+  tir:
+    clips:
+    - {fileID: 8300000, guid: 26e19616f6ba9f6469e9d3d6c38b23fe, type: 3}
+    volume: 0.18
+    pitchMin: 0.9
+    pitchMax: 1.15
+    minInterval: 0.05
+  coupDeMelee:
+    clips:
+    - {fileID: 8300000, guid: 2ebf2421dddc15a45b7fc6ae8197b1c0, type: 3}
+    volume: 0.3
+    pitchMin: 0.9
+    pitchMax: 1.2
+    minInterval: 0.05
+  poseTourelle:
+    clips:
+    - {fileID: 8300000, guid: d215a3499c9f80c4fb7fdb54e889425f, type: 3}
+    volume: 0.6
+    pitchMin: 0.9
+    pitchMax: 1.1
+    minInterval: 0.1
+  explosion:
+    clips:
+    - {fileID: 8300000, guid: d1698dd553af8ef4d887bc83b9687173, type: 3}
+    volume: 0.45
+    pitchMin: 0.9
+    pitchMax: 1.1
+    minInterval: 0.06
+  impactEnnemi:
+    clips:
+    - {fileID: 8300000, guid: 87e2452fe2c754248926c9a9ab93a467, type: 3}
+    volume: 0.3
+    pitchMin: 0.85
+    pitchMax: 1.2
+    minInterval: 0.03
+  mortEnnemi:
+    clips:
+    - {fileID: 8300000, guid: 558f9f56f603a954b8d45e17e89341d9, type: 3}
+    - {fileID: 8300000, guid: 2b6e306f144fd2047ad36490140f8b85, type: 3}
+    volume: 0.18
+    pitchMin: 0.8
+    pitchMax: 1.3
+    minInterval: 0.07
+  tirEnnemi:
+    clips:
+    - {fileID: 8300000, guid: 26e19616f6ba9f6469e9d3d6c38b23fe, type: 3}
+    volume: 0.12
+    pitchMin: 0.55
+    pitchMax: 0.7
+    minInterval: 0.08
+  joueurTouche:
+    clips:
+    - {fileID: 8300000, guid: 2b6e306f144fd2047ad36490140f8b85, type: 3}
+    volume: 0.6
+    pitchMin: 1
+    pitchMax: 1.15
+    minInterval: 0.1
+  mortJoueur:
+    clips:
+    - {fileID: 8300000, guid: bd8857660a16ba549b8cc522d93d9117, type: 3}
+    volume: 0.7
+    pitchMin: 1
+    pitchMax: 1
+    minInterval: 0.2

@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e2af7a21d133a745b4ab8561c841f4c, type: 3}
+  m_Name: "Weapon_B\xE2tonmagique"
+  m_EditorClassIdentifier: Assembly-CSharp::BrotatoLike.WeaponData
+  displayName: Magic Staff
+  tier: 1
+  price: 32
+  nextTier: {fileID: 11400000, guid: 16b484b39b050b44088fc532d782a3f6, type: 2}
+  kind: 0
+  sprite: {fileID: 21300000, guid: 3aa1cb26afcdc244bb3a95c193575ecb, type: 3}
+  spriteScale: 1
+  spriteAngleOffset: -45
+  projectileSprite: {fileID: 21300000, guid: 5ff9fd1dfa3921644a587a08e82b9e1c, type: 3}
+  projectileScale: 1
+  projectileAngleOffset: -90
+  damage: 6
+  cooldown: 1
+  range: 7
+  knockback: 0.4
+  critChance: 3
+  critMultiplier: 2
+  projectileSpeed: 9
+  projectilesPerShot: 1
+  spreadAngle: 0
+  inaccuracy: 0
+  pierce: 0
+  explosionRadius: 1
+  burstCount: 1
+  burstInterval: 0.08
+  slowAmount: 0
+  slowDuration: 1.5
+  turretSprite: {fileID: 0}
+  turretScale: 1
+  turretDuration: 7
+  turretFireInterval: 0.6
+  passiveModifiers: []
+  attackDuration: 0.25

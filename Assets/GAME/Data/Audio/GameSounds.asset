@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a38c51c681ac66047a0d5fe4ddf4f9fd, type: 3}
+  m_Name: GameSounds
+  m_EditorClassIdentifier: Assembly-CSharp::BrotatoLike.GameSounds
+  decompte:
+    clips:
+    - {fileID: 8300000, guid: 58f30a10d41250f45af68289f4df9bc9, type: 3}
+    volume: 0.6
+    pitchMin: 1
+    pitchMax: 1
+    minInterval: 0.2
+  debutVague:
+    clips:
+    - {fileID: 8300000, guid: c134bf6bd85561b4b938c913b97b57c9, type: 3}
+    volume: 0.5
+    pitchMin: 1
+    pitchMax: 1
+    minInterval: 0.5
+  finVague:
+    clips:
+    - {fileID: 8300000, guid: aaf15506a3e76264cbcc1a9d8251bf07, type: 3}
+    volume: 0.6
+    pitchMin: 1
+    pitchMax: 1
+    minInterval: 0.5
+  arriveeBoss:
+    clips:
+    - {fileID: 8300000, guid: d1698dd553af8ef4d887bc83b9687173, type: 3}
+    volume: 0.8
+    pitchMin: 0.45
+    pitchMax: 0.5
+    minInterval: 0.5
+  mortBoss:
+    clips:
+    - {fileID: 8300000, guid: d1698dd553af8ef4d887bc83b9687173, type: 3}
+    volume: 1
+    pitchMin: 0.6
+    pitchMax: 0.65
+    minInterval: 0.5
+  victoire:
+    clips:
+    - {fileID: 8300000, guid: 98c4cbde466bf6b45b93a1bf02c1569d, type: 3}
+    volume: 0.8
+    pitchMin: 1
+    pitchMax: 1
+    minInterval: 0.5
+  gameOver:
+    clips:
+    - {fileID: 8300000, guid: 832aa39d4fbe053428a67083bb091a1a, type: 3}
+    volume: 0.7
+    pitchMin: 1
+    pitchMax: 1
+    minInterval: 0.5

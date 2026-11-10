@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeSettings">
+    <configurations />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="16a260c4-0920-4e4d-a78f-3e17974fe5e5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../FishNet/CodeGenerating/cecil-0.11.4/Mono.Cecil.sln.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../FishNet/Runtime/Transporting/Transports/Tugboat/LiteNetLib/LiteNetLib.csproj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../com.rlabrecque.steamworks.net.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RedistCopy.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RedistCopy.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RedistInstall.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RedistInstall.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Settings.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Settings/EditorSteamworksNETSettings.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Settings/EditorSteamworksNETSettings.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Settings/EditorSteamworksNETSettingsElement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Settings/EditorSteamworksNETSettingsElement.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Settings/EditorSteamworksNETSettingsProvider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Settings/EditorSteamworksNETSettingsProvider.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Settings/EditorSteamworksNETSettingsStyleSheet.uss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Settings/EditorSteamworksNETSettingsStyleSheet.uss.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.rlabrecque.steamworks.net.editor.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.rlabrecque.steamworks.net.editor.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LICENSE.md.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Plugins.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Plugins/androidarm64.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Plugins/androidarm64/libsteam_api.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Plugins/androidarm64/libsteam_api.so.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Plugins/libsteam_api.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Plugins/libsteam_api.so.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Plugins/linuxarm64.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Plugins/linuxarm64/libsteam_api.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Plugins/linuxarm64/libsteam_api.so.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Plugins/steam_api.bundle.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Plugins/steam_api.bundle/Contents.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Plugins/steam_api.bundle/Contents/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Plugins/steam_api.bundle/Contents/MacOS.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Plugins/steam_api.bundle/Contents/MacOS/libsteam_api.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Plugins/steam_api.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Plugins/steam_api.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Plugins/steam_api64.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Plugins/steam_api64.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/CallbackDispatcher.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/CallbackDispatcher.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/CallbackIdentity.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/CallbackIdentity.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/ISteamMatchmakingResponses.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/ISteamMatchmakingResponses.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/InteropHelp.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/InteropHelp.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/Packsize.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/Packsize.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/Steam.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/Steam.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/Version.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/Version.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/NativeMethods.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/NativeMethods.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/SteamCallbacks.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/SteamCallbacks.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/SteamConstants.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/SteamConstants.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/SteamEnums.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/SteamEnums.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/SteamStructs.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/SteamStructs.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamapps.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamapps.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamclient.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamclient.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamfriends.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamfriends.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamgameserver.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamgameserver.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamgameserverclient.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamgameserverclient.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamgameserverhttp.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamgameserverhttp.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamgameserverinventory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamgameserverinventory.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamgameservernetworking.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamgameservernetworking.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamgameservernetworkingmessages.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamgameservernetworkingmessages.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamgameservernetworkingsockets.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamgameservernetworkingsockets.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamgameservernetworkingutils.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamgameservernetworkingutils.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamgameserverstats.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamgameserverstats.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamgameserverugc.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamgameserverugc.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamgameserverutils.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamgameserverutils.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamhtmlsurface.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamhtmlsurface.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamhttp.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamhttp.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteaminput.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteaminput.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteaminventory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteaminventory.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteammatchmaking.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteammatchmaking.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteammusic.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteammusic.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamnetworking.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamnetworking.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamnetworkingmessages.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamnetworkingmessages.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamnetworkingsockets.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamnetworkingsockets.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamnetworkingutils.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamnetworkingutils.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamparentalsettings.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamparentalsettings.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamremoteplay.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamremoteplay.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamremotestorage.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamremotestorage.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamscreenshots.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamscreenshots.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamtimeline.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamtimeline.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamugc.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamugc.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamuser.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamuser.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamuserstats.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamuserstats.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamutils.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamutils.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamvideo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/autogen/isteamvideo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/com.rlabrecque.steamworks.net.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/com.rlabrecque.steamworks.net.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/MatchmakingTypes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/MatchmakingTypes/gameserveritem_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/MatchmakingTypes/gameserveritem_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/MatchmakingTypes/servernetadr_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/MatchmakingTypes/servernetadr_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamClient.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamClient/SteamAPIWarningMessageHook_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamClient/SteamAPIWarningMessageHook_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamClient/SteamAPI_CheckCallbackRegistered_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamClient/SteamAPI_CheckCallbackRegistered_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamClientPublic.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamClientPublic/CGameID.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamClientPublic/CGameID.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamClientPublic/CSteamID.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamClientPublic/CSteamID.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamClientPublic/HAuthTicket.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamClientPublic/HAuthTicket.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamDatagramTickets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamDatagramTickets/SteamDatagramHostedAddress.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamDatagramTickets/SteamDatagramHostedAddress.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamDatagramTickets/SteamDatagramRelayAuthTicket.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamDatagramTickets/SteamDatagramRelayAuthTicket.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamFriends.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamFriends/FriendsGroupID_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamFriends/FriendsGroupID_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamHTMLSurface.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamHTMLSurface/HHTMLBrowser.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamHTMLSurface/HHTMLBrowser.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamHTTP.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamHTTP/HTTPCookieContainerHandle.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamHTTP/HTTPCookieContainerHandle.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamHTTP/HTTPRequestHandle.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamHTTP/HTTPRequestHandle.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamInput.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamInput/InputActionSetHandle_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamInput/InputActionSetHandle_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamInput/InputAnalogActionHandle_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamInput/InputAnalogActionHandle_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamInput/InputDigitalActionHandle_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamInput/InputDigitalActionHandle_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamInput/InputHandle_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamInput/InputHandle_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamInput/SteamInputActionEventCallbackPointer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamInput/SteamInputActionEventCallbackPointer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamInput/SteamInputActionEvent_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamInput/SteamInputActionEvent_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamInventory.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamInventory/SteamInventoryResult_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamInventory/SteamInventoryResult_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamInventory/SteamInventoryUpdateHandle_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamInventory/SteamInventoryUpdateHandle_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamInventory/SteamItemDef_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamInventory/SteamItemDef_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamInventory/SteamItemInstanceID_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamInventory/SteamItemInstanceID_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamMatchmaking.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamMatchmaking/HServerListRequest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamMatchmaking/HServerListRequest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamMatchmaking/HServerQuery.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamMatchmaking/HServerQuery.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamNetworking.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamNetworking/SNetListenSocket_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamNetworking/SNetListenSocket_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamNetworking/SNetSocket_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamNetworking/SNetSocket_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamNetworkingSockets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamNetworkingSockets/ISteamNetworkingConnectionSignaling.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamNetworkingSockets/ISteamNetworkingConnectionSignaling.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamNetworkingSockets/ISteamNetworkingSignalingRecvContext.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamNetworkingSockets/ISteamNetworkingSignalingRecvContext.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamNetworkingTypes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamNetworkingTypes/FSteamNetworkingSocketsDebugOutput.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamNetworkingTypes/FSteamNetworkingSocketsDebugOutput.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamNetworkingTypes/HSteamListenSocket.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamNetworkingTypes/HSteamListenSocket.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamNetworkingTypes/HSteamNetConnection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamNetworkingTypes/HSteamNetConnection.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamNetworkingTypes/HSteamNetPollGroup.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamNetworkingTypes/HSteamNetPollGroup.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamNetworkingTypes/SteamNetworkingConfigValue_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamNetworkingTypes/SteamNetworkingConfigValue_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamNetworkingTypes/SteamNetworkingErrMsg.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamNetworkingTypes/SteamNetworkingErrMsg.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamNetworkingTypes/SteamNetworkingIPAddr.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamNetworkingTypes/SteamNetworkingIPAddr.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamNetworkingTypes/SteamNetworkingIdentity.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamNetworkingTypes/SteamNetworkingIdentity.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamNetworkingTypes/SteamNetworkingMessage_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamNetworkingTypes/SteamNetworkingMessage_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamNetworkingTypes/SteamNetworkingMicroseconds.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamNetworkingTypes/SteamNetworkingMicroseconds.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamNetworkingTypes/SteamNetworkingPOPID.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamNetworkingTypes/SteamNetworkingPOPID.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamRemotePlay.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamRemotePlay/RemotePlayCursorID_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamRemotePlay/RemotePlayCursorID_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamRemotePlay/RemotePlayInput_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamRemotePlay/RemotePlayInput_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamRemotePlay/RemotePlaySessionID_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamRemotePlay/RemotePlaySessionID_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamRemoteStorage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamRemoteStorage/PublishedFileId_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamRemoteStorage/PublishedFileId_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamRemoteStorage/PublishedFileUpdateHandle_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamRemoteStorage/PublishedFileUpdateHandle_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamRemoteStorage/UGCFileWriteStreamHandle_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamRemoteStorage/UGCFileWriteStreamHandle_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamRemoteStorage/UGCHandle_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamRemoteStorage/UGCHandle_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamScreenshots.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamScreenshots/ScreenshotHandle.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamScreenshots/ScreenshotHandle.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamTimeline.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamTimeline/TimelineEventHandle_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamTimeline/TimelineEventHandle_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamTypes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamTypes/AccountID_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamTypes/AccountID_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamTypes/AppId_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamTypes/AppId_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamTypes/DepotId_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamTypes/DepotId_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamTypes/PartyBeaconID_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamTypes/PartyBeaconID_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamTypes/RTime32.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamTypes/RTime32.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamTypes/SteamAPICall_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamTypes/SteamAPICall_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamTypes/SteamIPAddress_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamTypes/SteamIPAddress_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamUGC.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamUGC/UGCQueryHandle_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamUGC/UGCQueryHandle_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamUGC/UGCUpdateHandle_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamUGC/UGCUpdateHandle_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamUserStats.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamUserStats/SteamLeaderboardEntries_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamUserStats/SteamLeaderboardEntries_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamUserStats/SteamLeaderboard_t.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/SteamUserStats/SteamLeaderboard_t.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/Steam_api_common.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/Steam_api_common/HSteamPipe.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/Steam_api_common/HSteamPipe.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/Steam_api_common/HSteamUser.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Runtime/types/Steam_api_common/HSteamUser.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package.json.meta" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3,
+  "fromUser": false
+}]]></component>
+  <component name="ProjectId" id="3LdDcZQUtN0lpTQ1s0JD2Gi3LHr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.jetbrains.opentelemetry.toolwindow.stripe.promo": "true",
+    "git-widget-placeholder": "develop",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="16a260c4-0920-4e4d-a78f-3e17974fe5e5" name="Changes" comment="" />
+      <created>1793775135925</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1793775135925</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.Tasks.TaskCanceledException" breakIfHandledByOtherCode="false" displayValue="System.Threading.Tasks.TaskCanceledException" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
